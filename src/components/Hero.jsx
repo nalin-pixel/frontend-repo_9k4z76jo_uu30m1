@@ -34,12 +34,12 @@ function Hero() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="#cta" className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#02C69A] to-[#00FFC6] px-6 py-3 font-semibold text-[#202020] shadow-[0_20px_80px_-20px_rgba(0,255,198,0.6)] hover:brightness-110 transition">
+              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#02C69A] to-[#00FFC6] px-6 py-3 font-semibold text-[#202020] shadow-[0_20px_80px_-20px_rgba(0,255,198,0.6)] hover:brightness-110 transition">
                 <Rocket className="h-5 w-5" />
-                Start free trial
+                Book Intro Call
               </a>
-              <a href="#features" className="inline-flex items-center justify-center rounded-xl px-6 py-3 border border-white/10 bg-white/5 text-white/80 hover:bg-white/10 transition">
-                See how it works
+              <a href="#cta" className="inline-flex items-center justify-center rounded-xl px-6 py-3 border border-white/10 bg-white/5 text-white/80 hover:bg-white/10 transition">
+                View Pricing
               </a>
             </div>
 

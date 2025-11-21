@@ -21,10 +21,10 @@ function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="#cta" className="hidden sm:inline-flex bg-white/5 hover:bg-white/10 text-[#FEFEFE] border border-white/10 rounded-lg px-4 py-2 text-sm transition-colors">See a demo</a>
-          <a href="#cta" className="inline-flex items-center gap-2 bg-gradient-to-br from-[#02C69A] to-[#00FFC6] text-[#202020] font-semibold rounded-lg px-4 py-2 text-sm shadow-[0_10px_30px_-10px_rgba(0,255,198,0.6)] hover:brightness-110 transition">
+          <a href="#cta" className="hidden sm:inline-flex bg-white/5 hover:bg-white/10 text-[#FEFEFE] border border-white/10 rounded-lg px-4 py-2 text-sm transition-colors">View Pricing</a>
+          <a href="#contact" className="inline-flex items-center gap-2 bg-gradient-to-br from-[#02C69A] to-[#00FFC6] text-[#202020] font-semibold rounded-lg px-4 py-2 text-sm shadow-[0_10px_30px_-10px_rgba(0,255,198,0.6)] hover:brightness-110 transition">
             <Sparkles className="h-4 w-4" />
-            Get started
+            Book Intro Call
           </a>
           <button className="md:hidden p-2 text-white/70 hover:text-white"><Menu className="h-6 w-6" /></button>
         </div>

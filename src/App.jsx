@@ -3,6 +3,7 @@ import Hero from "./components/Hero"
 import Features from "./components/Features"
 import Logos from "./components/Logos"
 import CTA from "./components/CTA"
+import Contact from "./components/Contact"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Logos />
       <Features />
       <CTA />
+      <Contact />
 
       {/* Footer */}
       <footer id="contact" className="border-t border-white/10">
@@ -28,7 +30,7 @@ function App() {
           </div>
           <div className="text-sm text-white/60 space-y-2">
             <a href="#features" className="block hover:text-[#00FFC6]">Features</a>
-            <a href="#cta" className="block hover:text-[#00FFC6]">Get a demo</a>
+            <a href="#cta" className="block hover:text-[#00FFC6]">View Pricing</a>
           </div>
           <div className="text-sm text-white/60">
             <p>© {new Date().getFullYear()} Automations Club</p>
