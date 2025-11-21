@@ -7,6 +7,8 @@ function GradientOrb({ className = "" }) {
   )
 }
 
+const BRAND_IMG = "https://storage.googleapis.com/msgsndr/izRuEqjz2WA6Oud0b2a0/media/6916bec11c143ab4f6f86725.png"
+
 function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -57,29 +59,43 @@ function Hero() {
             </div>
           </div>
 
+          {/* Brand focal image */}
           <div className="relative">
+            {/* Outer halo/rings to emphasize the brand visual */}
+            <div className="pointer-events-none absolute inset-0 -z-10">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[680px] h-[680px] rounded-full opacity-30 blur-3xl" style={{ background: "radial-gradient(closest-side, rgba(0,255,198,0.5), transparent)" }} />
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full border border-[#00FFC6]/20" />
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] rounded-full border border-[#00FFC6]/10" />
+            </div>
+
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm"
+              className="relative rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-sm shadow-[0_30px_120px_-30px_rgba(0,255,198,0.35)]"
             >
-              <div className="aspect-[4/3] rounded-xl overflow-hidden bg-[#141414] grid grid-cols-6 gap-1 p-3">
-                {[...Array(36)].map((_, i) => (
-                  <div key={i} className="h-16 rounded bg-gradient-to-b from-[#0E0E0E] to-[#121212] relative overflow-hidden">
-                    <div className="absolute inset-x-0 -top-6 h-12 bg-gradient-to-b from-transparent to-[#00FFC6]/10" />
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,255,198,0.08),transparent_60%)]" />
-                  </div>
-                ))}
+              <div className="aspect-[4/3] rounded-xl overflow-hidden bg-[#0f0f10] relative">
+                <img
+                  src={BRAND_IMG}
+                  alt="Automations Club brand artwork"
+                  className="h-full w-full object-contain"
+                  loading="eager"
+                />
+
+                {/* Subtle top glow */}
+                <div className="pointer-events-none absolute inset-x-0 -top-12 h-24 bg-gradient-to-b from-[#00FFC6]/25 to-transparent" />
+                {/* Gradient border sheen */}
+                <div className="pointer-events-none absolute inset-0 rounded-xl" style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.06)" }} />
               </div>
-              <div className="absolute -inset-0.5 rounded-2xl border border-transparent [mask-image:linear-gradient(0deg,black,transparent)]" style={{ background: "linear-gradient(120deg, rgba(0,255,198,0.25), rgba(2,198,154,0.25), transparent)" }} />
+
+              {/* Accent label chip */}
+              <div className="absolute -top-6 -right-6">
+                <div className="inline-flex items-center gap-2 rounded-full bg-[#00FFC6]/10 px-3 py-1 text-xs text-[#00FFC6] border border-[#00FFC6]/30">
+                  <Sparkles className="h-3.5 w-3.5" />
+                  Brand-first design
+                </div>
+              </div>
             </motion.div>
-            <div className="absolute -top-6 -right-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#00FFC6]/10 px-3 py-1 text-xs text-[#00FFC6] border border-[#00FFC6]/30">
-                <Sparkles className="h-3.5 w-3.5" />
-                AI-generated replies
-              </div>
-            </div>
           </div>
         </div>
       </div>
