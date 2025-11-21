@@ -12,6 +12,41 @@
     --font-manrope: 'Manrope', system-ui, sans-serif;
   }
 
+  /* Theme tokens */
+  :root[data-theme='dark'] {
+    --bg: #0E0E0E;
+    --text: #FEFEFE;
+    --text-muted: rgba(255,255,255,0.7);
+    --border: rgba(255,255,255,0.1);
+    --panel: rgba(255,255,255,0.05);
+    --panel-hover: rgba(255,255,255,0.1);
+    --chip-bg: rgba(0,255,198,0.1);
+    --chip-border: rgba(0,255,198,0.3);
+    --chip-text: #00FFC6;
+    --accent-from: #02C69A;
+    --accent-to: #00FFC6;
+    --on-accent: #202020;
+    --star: rgba(255,255,255,1);
+    --subtle-glow: rgba(0,255,198,0.06);
+  }
+
+  :root[data-theme='light'] {
+    --bg: #F9FAFB; /* near-white */
+    --text: #0E0E0E;
+    --text-muted: rgba(0,0,0,0.6);
+    --border: rgba(0,0,0,0.08);
+    --panel: rgba(255,255,255,0.9);
+    --panel-hover: rgba(255,255,255,1);
+    --chip-bg: rgba(0, 198, 154, 0.12);
+    --chip-border: rgba(0, 198, 154, 0.35);
+    --chip-text: #02C69A;
+    --accent-from: #02C69A;
+    --accent-to: #00FFC6;
+    --on-accent: #0E0E0E;
+    --star: rgba(0,0,0,0.8);
+    --subtle-glow: rgba(2,198,154,0.08);
+  }
+
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;

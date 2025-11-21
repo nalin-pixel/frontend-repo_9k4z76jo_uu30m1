@@ -3,7 +3,7 @@ import { Star, Sparkles, Rocket } from "lucide-react"
 
 function GradientOrb({ className = "" }) {
   return (
-    <div className={`absolute rounded-full blur-3xl opacity-30 ${className}`} style={{ background: "radial-gradient(closest-side, #00FFC6, transparent)" }} />
+    <div className={`absolute rounded-full blur-3xl opacity-30 ${className}`} style={{ background: "radial-gradient(closest-side, var(--accent-to), transparent)" }} />
   )
 }
 
@@ -13,8 +13,8 @@ function Hero() {
   return (
     <section className="relative overflow-hidden">
       {/* Space background */}
-      <div className="absolute inset-0 bg-[#0E0E0E]" />
-      <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, rgba(0,255,198,0.06), transparent 40%), radial-gradient(circle at 80% 10%, rgba(2,198,154,0.07), transparent 45%), radial-gradient(circle at 50% 90%, rgba(0,255,198,0.05), transparent 50%)" }} />
+      <div className="absolute inset-0 bg-[var(--bg)]" />
+      <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, var(--subtle-glow), transparent 40%), radial-gradient(circle at 80% 10%, var(--subtle-glow), transparent 45%), radial-gradient(circle at 50% 90%, var(--subtle-glow), transparent 50%)" }} />
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
 
       {/* Glows */}
@@ -24,23 +24,23 @@ function Hero() {
       <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-28">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 mb-4">
-              <Star className="h-3.5 w-3.5 text-[#00FFC6]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--border)] bg-[var(--panel)] px-3 py-1 text-xs text-[color:var(--text-muted)] mb-4">
+              <Star className="h-3.5 w-3.5 text-[var(--accent-to)]" />
               Trusted by local businesses across Baton Rouge
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FEFEFE]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
               Automate reviews. Win more customers.
             </h1>
-            <p className="mt-5 text-lg text-white/70 max-w-xl">
+            <p className="mt-5 text-lg text-[color:var(--text-muted)] max-w-xl">
               Automations Club turns happy customers into growth. We trigger review requests, reply with AI, and turn 5-star feedback into scroll-stopping posts.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#02C69A] to-[#00FFC6] px-6 py-3 font-semibold text-[#202020] shadow-[0_20px_80px_-20px_rgba(0,255,198,0.6)] hover:brightness-110 transition">
+              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[var(--accent-from)] to-[var(--accent-to)] px-6 py-3 font-semibold text-[var(--on-accent)] shadow-[0_20px_80px_-20px_rgba(0,255,198,0.6)] hover:brightness-110 transition">
                 <Rocket className="h-5 w-5" />
                 Book Intro Call
               </a>
-              <a href="#cta" className="inline-flex items-center justify-center rounded-xl px-6 py-3 border border-white/10 bg-white/5 text-white/80 hover:bg-white/10 transition">
+              <a href="#cta" className="inline-flex items-center justify-center rounded-xl px-6 py-3 border border-[color:var(--border)] bg-[var(--panel)] text-[color:var(--text-muted)] hover:bg-[var(--panel-hover)] transition">
                 View Pricing
               </a>
             </div>
@@ -51,9 +51,9 @@ function Hero() {
                 { label: "Time saved", value: "12h/wk" },
                 { label: "Posts created", value: "+300" },
               ].map((stat) => (
-                <div key={stat.label} className="rounded-xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-2xl font-bold text-[#FEFEFE]">{stat.value}</p>
-                  <p className="text-xs text-white/60">{stat.label}</p>
+                <div key={stat.label} className="rounded-xl border border-[color:var(--border)] bg-[var(--panel)] p-4">
+                  <p className="text-2xl font-bold">{stat.value}</p>
+                  <p className="text-xs text-[color:var(--text-muted)]">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -64,15 +64,15 @@ function Hero() {
             {/* Outer halo/rings to emphasize the brand visual */}
             <div className="pointer-events-none absolute inset-0 -z-10">
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[680px] h-[680px] rounded-full opacity-30 blur-3xl" style={{ background: "radial-gradient(closest-side, rgba(0,255,198,0.5), transparent)" }} />
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full border border-[#00FFC6]/20" />
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] rounded-full border border-[#00FFC6]/10" />
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full border border-[var(--accent-to)]/20" />
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] rounded-full border border-[var(--accent-to)]/10" />
             </div>
 
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-sm shadow-[0_30px_120px_-30px_rgba(0,255,198,0.35)]"
+              className="relative rounded-2xl border border-[color:var(--border)] bg-[var(--panel)] p-3 backdrop-blur-sm shadow-[0_30px_120px_-30px_rgba(0,255,198,0.35)]"
             >
               <div className="aspect-[4/3] rounded-xl overflow-hidden bg-[#0f0f10] relative">
                 <img
@@ -83,14 +83,14 @@ function Hero() {
                 />
 
                 {/* Subtle top glow */}
-                <div className="pointer-events-none absolute inset-x-0 -top-12 h-24 bg-gradient-to-b from-[#00FFC6]/25 to-transparent" />
+                <div className="pointer-events-none absolute inset-x-0 -top-12 h-24 bg-gradient-to-b from-[var(--accent-to)]/25 to-transparent" />
                 {/* Gradient border sheen */}
-                <div className="pointer-events-none absolute inset-0 rounded-xl" style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.06)" }} />
+                <div className="pointer-events-none absolute inset-0 rounded-xl" style={{ boxShadow: "inset 0 0 0 1px var(--border)" }} />
               </div>
 
               {/* Accent label chip */}
               <div className="absolute -top-6 -right-6">
-                <div className="inline-flex items-center gap-2 rounded-full bg-[#00FFC6]/10 px-3 py-1 text-xs text-[#00FFC6] border border-[#00FFC6]/30">
+                <div className="inline-flex items-center gap-2 rounded-full bg-[var(--chip-bg)] px-3 py-1 text-xs text-[color:var(--chip-text)] border border-[color:var(--chip-border)]">
                   <Sparkles className="h-3.5 w-3.5" />
                   Brand-first design
                 </div>

@@ -42,26 +42,26 @@ const features = [
 function Features() {
   return (
     <section id="features" className="relative">
-      <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, rgba(0,255,198,0.05), transparent 45%)" }} />
+      <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, var(--subtle-glow), transparent 45%)" }} />
 
       <div className="relative max-w-7xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#FEFEFE] tracking-tight">Everything you need to win reviews</h2>
-          <p className="mt-4 text-white/70">Purpose-built for local businesses in Baton Rouge and beyond.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Everything you need to win reviews</h2>
+          <p className="mt-4 text-[color:var(--text-muted)]">Purpose-built for local businesses in Baton Rouge and beyond.</p>
         </div>
 
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map(({ icon: Icon, title, desc, tag }) => (
-            <div key={title} className="relative rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition group">
+            <div key={title} className="relative rounded-2xl border border-[color:var(--border)] bg-[var(--panel)] p-5 hover:bg-[var(--panel-hover)] transition group">
               <div className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 pointer-events-none" style={{ background: "linear-gradient(180deg, rgba(0,255,198,0.15), transparent)" }} />
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-[#02C69A] to-[#00FFC6] flex items-center justify-center">
-                  <Icon className="h-5 w-5 text-[#202020]" />
+                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-[var(--accent-from)] to-[var(--accent-to)] flex items-center justify-center">
+                  <Icon className="h-5 w-5 text-[var(--on-accent)]" />
                 </div>
-                <span className="text-xs text-[#00FFC6] border border-[#00FFC6]/30 bg-[#00FFC6]/10 rounded-full px-2 py-0.5">{tag}</span>
+                <span className="text-xs text-[color:var(--chip-text)] border border-[color:var(--chip-border)] bg-[var(--chip-bg)] rounded-full px-2 py-0.5">{tag}</span>
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-[#FEFEFE]">{title}</h3>
-              <p className="mt-1 text-sm text-white/70">{desc}</p>
+              <h3 className="mt-4 text-lg font-semibold">{title}</h3>
+              <p className="mt-1 text-sm text-[color:var(--text-muted)]">{desc}</p>
             </div>
           ))}
         </div>
